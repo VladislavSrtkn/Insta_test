@@ -207,3 +207,8 @@ header p {
     padding-left: 0px;
     margin-bottom: 0px;
 }
+
+footer a {
+    text-decoration: none;
+    color: #cfcfd3;
+}
