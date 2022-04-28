@@ -207,6 +207,8 @@ header p {
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
+    text-decoration: none;
+    color: #cfcfd3;
 }
 
 .tel {
