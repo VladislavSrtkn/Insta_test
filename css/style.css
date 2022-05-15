@@ -1,0 +1,190 @@
+
+/* Навигация */
+.main-nav {
+    border-bottom: 0.1px solid rgb(219,219,219);
+    min-height: 60px;
+}
+
+.nav-container {
+    min-height: 60px;
+}
+
+@media only screen and (max-width:767px) {
+    .search-form-cont {
+        display: none !important;
+    }
+}
+
+
+
+
+.main-logo {
+    max-height: 29px;
+}
+
+i {
+    font-size: 24px;
+    color: rgb(46, 45, 45);
+}
+
+@media only screen and (max-width:320px) {
+    i {
+        font-size: 20px;
+        color: rgb(46, 45, 45);
+    }
+}
+
+
+
+.nav-avatar {
+    width: 24px;
+    margin-top: 8px;
+
+}
+
+@media only screen and (max-width:320px) {
+    .nav-avatar {
+        width: 20px;
+        margin-top: 4px;
+    }
+}
+
+.rounded {
+    border-radius: 50% !important;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+
+/* О пользователе */
+
+
+
+@media only screen and (max-width:600px) {
+    .main-avatar {
+        max-width: 77px;
+    } 
+}
+
+.about h2 {
+    font-weight: 400 !important;
+    font-size: 1.1rem;
+}
+
+.about button {
+    border: 1px solid rgb(128, 128, 128);
+}
+
+@media only screen and (max-width:320px) {
+    .about button {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width:767px) {
+    .btn-for-big {
+        display: none;
+    }
+    .name-for-big {
+        display: none;
+    }
+}
+@media only screen and (min-width:768px) {
+    .btn-for-small {
+        display: none;
+    }
+    .name-for-small {
+        display: none;
+    }
+}
+
+.about h1 {
+    font-size: 1.3rem;
+    overflow: hidden;
+}
+
+.btn {
+    background-color: transparent;
+}
+
+/* Сторис */
+
+.stories img {
+    border: 1px solid rgb(150, 147, 147);
+    max-width: 77px;
+}
+
+
+.stories h6 {
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: lighter;
+}
+
+
+/* Счетчик подписок */
+
+.sub-count {
+    font-size: 0.9rem;
+}
+
+.count {
+    border-top: 0.1px solid rgb(219,219,219);
+}
+
+@media only screen and (max-width:767px) {
+    .sub-count-for-big {
+        display: none;  
+    }
+}
+@media only screen and (min-width:768px) {
+    .sub-count-for-small {
+        display: none;
+        border-bottom: 0.1px solid rgb(219,219,219);
+        border-top: 0.1px solid rgb(219,219,219);
+    }
+}
+
+/* Меню */
+
+.menu {
+    border-top: 0.1px solid rgb(219,219,219); 
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media only screen and (max-width:767px) {
+    .menu-text {
+        display: none;  
+    }
+}
+@media only screen and (min-width:768px) {
+    .menu i {
+        font-size: 20px;
+    }
+    .menu-text {
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+    .menu a {
+        border-top: 0.1px solid transparent;
+    }
+
+    .menu a:hover {
+        border-top: 0.1px solid #000;
+    }
+}
+
+/* Фотографии */
+
+.btn-primary {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+
+.modal-body {
+    padding: 0.1rem;
+    width: 100%;
+}
