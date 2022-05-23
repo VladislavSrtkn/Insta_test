@@ -1,5 +1,5 @@
 
-/* Навигация */
+/* Navigation */
 .main-nav {
     border-bottom: 0.1px solid rgb(219,219,219);
     min-height: 60px;
@@ -14,9 +14,6 @@
         display: none !important;
     }
 }
-
-
-
 
 .main-logo {
     max-height: 29px;
@@ -34,12 +31,8 @@ i {
     }
 }
 
-
-
 .nav-avatar {
     width: 24px;
-    margin-top: 6px;
-
 }
 
 @media only screen and (max-width:320px) {
@@ -55,9 +48,7 @@ i {
 }
 
 
-/* О пользователе */
-
-
+/* About user */
 
 @media only screen and (max-width:600px) {
     .main-avatar {
@@ -105,7 +96,7 @@ i {
     background-color: transparent;
 }
 
-/* Сторис */
+/* Stories*/
 
 .stories img {
     border: 1px solid rgb(150, 147, 147);
@@ -120,7 +111,7 @@ i {
 }
 
 
-/* Счетчик подписок */
+/* Sub`s count*/
 
 .sub-count {
     font-size: 0.9rem;
@@ -143,7 +134,7 @@ i {
     }
 }
 
-/* Меню */
+/* Menu */
 
 .menu {
     border-top: 0.1px solid rgb(219,219,219); 
@@ -176,7 +167,7 @@ i {
     }
 }
 
-/* Фотографии */
+/* User`s images */
 
 .btn-primary {
     background-color: transparent;
@@ -188,3 +179,4 @@ i {
     padding: 0.1rem;
     width: 100%;
 }
+
