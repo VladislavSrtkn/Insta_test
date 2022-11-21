@@ -1,5 +1,5 @@
 document
-  .querySelectorAll("img[alt='user`s image']")
+  .querySelectorAll("img[data-bs-target='#Modal1']")
   .forEach((img) => img.addEventListener('click', changeActiveImage));
 
 function changeActiveImage(event) {
@@ -12,40 +12,48 @@ function changeActiveImage(event) {
 
 document
   .querySelector('.carousel-control-prev')
-  .addEventListener('click', previousImage);
+  .addEventListener('click', showPreviousImage);
 
-function previousImage() {
+function showPreviousImage() {
   const sources = [];
 
   document
-    .querySelectorAll("img[alt='user`s image']")
+    .querySelectorAll("img[data-bs-target='#Modal1']")
     .forEach((image) => sources.push(image.src));
 
   const carouselInner = document.querySelector('#carouselImage');
 
   const currentIndex = sources.indexOf(carouselInner.src);
 
-  const prevIndex =
-    currentIndex - 1 >= 0 ? currentIndex - 1 : sources.length - 1;
+  const prevIndex = currentIndex - 1;
+
+  if (currentIndex == 0) {
+    return;
+  }
 
   carouselInner.src = sources[prevIndex];
 }
 
 document
   .querySelector('.carousel-control-next')
-  .addEventListener('click', nextImage);
+  .addEventListener('click', showNextImage);
 
-function nextImage() {
+function showNextImage() {
   const sources = [];
+
   document
-    .querySelectorAll("img[alt='user`s image']")
+    .querySelectorAll("img[data-bs-target='#Modal1']")
     .forEach((image) => sources.push(image.src));
 
   const carouselInner = document.querySelector('#carouselImage');
 
   const currentIndex = sources.indexOf(carouselInner.src);
 
-  const nextIndex = currentIndex + 1 < sources.length ? currentIndex + 1 : 0;
+  const nextIndex = currentIndex + 1;
+
+  if (nextIndex == sources.length) {
+    return;
+  }
 
   carouselInner.src = sources[nextIndex];
 }
