@@ -6,12 +6,35 @@ function changeActiveImage(event) {
   const image = event.target;
   const imageSource = image.src;
 
-  const carouselInner = document.querySelector('#carouselImage');
-  carouselInner.src = imageSource;
+  hideArrows(imageSource);
+
+  const modalImage = document.querySelector('#modalImage');
+  modalImage.src = imageSource;
+}
+
+function hideArrows(src) {
+  const sources = [];
+  document
+    .querySelectorAll("img[data-bs-target='#Modal1']")
+    .forEach((image) => sources.push(image.src));
+
+  const currentIndex = sources.indexOf(src);
+
+  if (currentIndex == 0) {
+    document.querySelector('#arrowLeft').classList.add('d-none');
+  } else {
+    document.querySelector('#arrowLeft').classList.remove('d-none');
+  }
+
+  if (currentIndex == sources.length - 1) {
+    document.querySelector('#arrowRight').classList.add('d-none');
+  } else {
+    document.querySelector('#arrowRight').classList.remove('d-none');
+  }
 }
 
 document
-  .querySelector('.carousel-control-prev')
+  .querySelector('#arrowLeft')
   .addEventListener('click', showPreviousImage);
 
 function showPreviousImage() {
@@ -21,9 +44,9 @@ function showPreviousImage() {
     .querySelectorAll("img[data-bs-target='#Modal1']")
     .forEach((image) => sources.push(image.src));
 
-  const carouselInner = document.querySelector('#carouselImage');
+  const modalImage = document.querySelector('#modalImage');
 
-  const currentIndex = sources.indexOf(carouselInner.src);
+  const currentIndex = sources.indexOf(modalImage.src);
 
   const prevIndex = currentIndex - 1;
 
@@ -31,12 +54,11 @@ function showPreviousImage() {
     return;
   }
 
-  carouselInner.src = sources[prevIndex];
+  hideArrows(sources[prevIndex]);
+  modalImage.src = sources[prevIndex];
 }
 
-document
-  .querySelector('.carousel-control-next')
-  .addEventListener('click', showNextImage);
+document.querySelector('#arrowRight').addEventListener('click', showNextImage);
 
 function showNextImage() {
   const sources = [];
@@ -45,9 +67,9 @@ function showNextImage() {
     .querySelectorAll("img[data-bs-target='#Modal1']")
     .forEach((image) => sources.push(image.src));
 
-  const carouselInner = document.querySelector('#carouselImage');
+  const modalImage = document.querySelector('#modalImage');
 
-  const currentIndex = sources.indexOf(carouselInner.src);
+  const currentIndex = sources.indexOf(modalImage.src);
 
   const nextIndex = currentIndex + 1;
 
@@ -55,5 +77,6 @@ function showNextImage() {
     return;
   }
 
-  carouselInner.src = sources[nextIndex];
+  hideArrows(sources[nextIndex]);
+  modalImage.src = sources[nextIndex];
 }
